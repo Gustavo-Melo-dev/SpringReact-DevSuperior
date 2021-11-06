@@ -11,7 +11,7 @@ type ChartData = {
 
 const DonutChart = () => {
 
-    const [chartData, setChartData] = useState<ChartData>({ labels: [], series: [] });
+    let chartData : ChartData = ({ labels: [], series: [] });
 
 
     useEffect(() => {
@@ -21,9 +21,10 @@ const DonutChart = () => {
                 const myLabels = data.map(x => x.sallerName);
                 const mySeries = data.map(x => x.sum);
 
-                setChartData({ labels: myLabels, series: mySeries });
+               chartData = {labels: myLabels, series: mySeries};
+               console.log(chartData);
             });
-    }, [])
+    }, []);
 
     const options = {
         legend: {
