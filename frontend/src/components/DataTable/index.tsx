@@ -55,6 +55,13 @@ const DataTable = () => {
                     </tbody>
                 </table>
             </div>
+            <div className="d-flex justify-content-center py-3">
+                <a href="/">
+                    <button className="btn btn-primary flex-end">
+                        Voltar
+                    </button>
+                </a>
+            </div>
         </>
     );
 }
